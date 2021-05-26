@@ -41,6 +41,3 @@ echo "EC2 Instance Public IP: $EC2_PublicIP"
 echo "RDS EndPoint: $RDS"
 
 ### Need to add the Public IP automatically to host file and RDS endpoint to mysql Conf
-
-
-
