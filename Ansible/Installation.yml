@@ -1,0 +1,7 @@
+---
+- name: Copy the Infra creation scripts
+  hosts: ec2
+  tasks:
+      - name: Executing the scripts
+        become: true
+        command: ./tmp/install_dependencies_aws.sh
