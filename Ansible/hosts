@@ -2,5 +2,4 @@
 ansible_connection = ssh
 
 [aws-ec2]
-#ec2 ansible_host=13.232.216.243 ansible_python_interpreter=/usr/bin/python3
-ec2 ansible_host=15.206.80.42 ansible_user=ubuntu ansible_private_key_file=/home/ubuntu/media-wiki-key.pem ansible_python_interpreter=/usr/bin/python3
+ec2 ansible_host=15.206.80.42 ansible_python_interpreter=/usr/bin/python3
