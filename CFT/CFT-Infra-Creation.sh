@@ -2,13 +2,16 @@
 
 echo -e "Creating Stack ....."
 
+export AWS_ACCESS_KEY_ID=$ACCESS_KEY && \
+export AWS_SECRET_ACCESS_KEY=$SECRET_KEY
+
 STACK_NAME=$1
 
-aws cloudformation create-stack --stack-name $1 --template-body file://EC2-RDS-CFT.json
+aws cloudformation create-stack --stack-name $1 --template-body file://CFT/EC2-RDS-CFT.json
 echo -e "RDS-DB and EC2 instance will be up in few moments...\n"
 aws cloudformation wait stack-create-complete --stack-name $1
 
-echo -e "Stack Created Successfully !!!"
+echo -e "Stack Created Successfully !!! \n"
 
 
 #STACK_STATUS=$(aws cloudformation describe-stacks --stack-name $1 | grep StackStatus | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
@@ -32,7 +35,7 @@ EC2_PublicIP=$(aws ec2 describe-instances --instance-ids i-0101c8e1144c92b0e | g
 #    sleep 15
 #    
 #done
-echo -e "RDS and EC2 is Up live \n"
+echo -e "RDS and EC2 Details \n"
 echo "EC2 Instance ID: $EC2"
 echo "EC2 Instance Public IP: $EC2_PublicIP"
 echo "RDS EndPoint: $RDS"
