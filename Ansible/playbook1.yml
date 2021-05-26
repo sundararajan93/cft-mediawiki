@@ -9,7 +9,4 @@
             - { src: '../install_dependencies_aws.sh',  dest: '/tmp/install_dependencies_aws.sh', mode: +x}
             - { src: '../configure_mysql_aws.sh',  dest: '/tmp/configure_mysql_aws.sh', mode: +x}
             - { src: '../install_mediawiki_aws.sh',  dest: '/tmp/install_mediawiki_aws.sh', mode: +x}
-
-
-        
-        
+            
