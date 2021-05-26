@@ -5,7 +5,8 @@
       - name: copying script files to remote host
         become: true
         copy: 
-          src: install_dependencies_aws.sh
-          dest: /tmp/install_dependencies_aws.sh
+          src={{ item.src }} dest={{ item.dest }}
+          with_items: 
+            - { src: '../install_dependencies_aws.sh',  dest: '/tmp/' }
           mode: +x
         
