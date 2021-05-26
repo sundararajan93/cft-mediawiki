@@ -5,3 +5,4 @@
       - name: Executing the scripts
         become: true
         command: /tmp/install_dependencies_aws.sh
+        
