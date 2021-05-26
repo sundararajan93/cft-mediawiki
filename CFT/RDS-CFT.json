@@ -1,0 +1,38 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "14dff13e-5cd6-41d0-a415-11ad6a44813b": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 230,
+                    "y": 40
+                },
+                "z": 0
+            }
+        }
+    },
+    "Resources": {
+        "mysqldb": {
+            "Type": "AWS::RDS::DBInstance",
+            "Properties": {
+                "AllocatedStorage" : "20",
+                "DBInstanceIdentifier" : "wikidemo",
+                "DBInstanceClass" : "db.t2.micro",
+                "Engine": "MySQL",
+                "EngineVersion": "8.0.16",
+                "MasterUsername" : "wikiuser",
+                "MasterUserPassword" : "password",
+                "PubliclyAccessible" : true
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "14dff13e-5cd6-41d0-a415-11ad6a44813b"
+                }
+            }
+        }
+    }
+}

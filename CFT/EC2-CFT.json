@@ -1,0 +1,47 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "f229fe46-af07-4d46-96d6-bc00140f0510": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 230,
+                    "y": 10
+                },
+                "z": 0
+            }
+        }
+    },
+    "Resources": {
+        "Metadata": {
+            "AWS::CloudFormation::Init": {
+                "config": {
+                    "packages": {
+                        "apt": {
+                            "python": []                            
+                        }
+                    }
+                }
+            }
+        },
+        "wikiweb": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId" : "ami-04bde106886a53080",
+                "InstanceType" : "t2.micro",
+                "KeyName" : "media-wiki-key",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "wiki-web"}
+                ]
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "f229fe46-af07-4d46-96d6-bc00140f0510"
+                }
+            }
+        }
+    }
+}

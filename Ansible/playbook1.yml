@@ -1,0 +1,11 @@
+---
+- name: Copy the Infra creation scripts
+  hosts: ec2
+  tasks:
+      - name: copying script files to remote host
+        become: true
+        copy: 
+          src: install_dependencies_aws.sh
+          dest: /tmp/install_dependencies_aws.sh
+          mode: +x
+        
