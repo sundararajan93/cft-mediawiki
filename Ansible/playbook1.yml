@@ -6,6 +6,6 @@
         become: true
         copy: src={{ item.src }} dest={{ item.dest }}
         with_items: 
-            - { src: '../install_dependencies_aws.sh',  dest: '/tmp/' }
+            - { src: '../install_dependencies_aws.sh',  dest: '/tmp/install_dependencies_aws.sh' }
         mode: +x
         
