@@ -27,7 +27,7 @@ echo -e "Stack Created Successfully !!! \n"
 #RDS=$(aws rds describe-db-instances --db-instance-identifier wikidemo | grep DBInstanceStatus | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
 EC2=$(aws cloudformation describe-stack-resources --stack-name $1 | grep "i-" | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
 RDS=$(aws rds describe-db-instances --db-instance-identifier wikidemo | grep Address | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
-EC2_PublicIP=$(aws ec2 describe-instances --instance-ids $i | grep PublicIpAddress | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
+EC2_PublicIP=$(aws ec2 describe-instances --instance-ids $1 | grep PublicIpAddress | sed -e 's/^[[:space:]]*//' | awk '{print $2}' | cut -d "\"" -f 2)
 #echo "RDS & EC2 are being created..."
 #while [ $RDS != available ]
 #do
