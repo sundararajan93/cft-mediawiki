@@ -9,3 +9,4 @@
       - name: Configuring mediawiki
         become: true
         command: /tmp/install_mediawiki_aws.sh
+        

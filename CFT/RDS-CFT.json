@@ -25,7 +25,7 @@
                 "Engine": "MySQL",
                 "EngineVersion": "8.0.16",
                 "MasterUsername" : "wikiuser",
-                "MasterUserPassword" : "password",
+                "MasterUserPassword" : "testpass",
                 "PubliclyAccessible" : true
             },
             "Metadata": {
